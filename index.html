@@ -1,0 +1,164 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/outrun.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+<!--[if IE]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
+  your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<div class="background-80s animated-clouds stars" style="--background-height:100vh">
+  <div class="sun"></div>
+
+
+  <div class="overlay"></div>
+
+  <div class="text">
+    <div id="masterMenu" onclick="openMenu()" class="menu outrun glow show">MENU</div>
+    <div id="dropDownMenu" class="menu outrun glow">
+      <a class="menu" href="/blog/">BLOG</a><br/>
+      <a class="menu" onclick="showResume()" href="#">RESUME</a><br/>
+      <a class="menu" onclick="showProjects()" href="#">PROJECTS</a><br/>
+    </div>
+
+
+    <div id="nameBox" class="hidden-content show">
+      <div class="chrome shine" data-text="WILYARTI">WILYARTI<span class="spark"></span></div>
+      <div class="chrome shine" data-text="HOWARD" style="--shine-delay:1s;">HOWARD<span
+        class="spark spark-offset"></span></div>
+    </div>
+
+    <div id="dynamicTitle"  class="menu outrun glow"></div>
+
+  </div>
+
+  <div id="resumeBox" class="hidden-content">
+    <div class="outrun glow show">RESUME</div>
+    <br/>
+    <table class="outrun-table">
+      <tr class="outrun-table-tr">
+        <th>LANGUAGE</th>
+        <th>IMPLEMENTATION</th>
+        <th>PROJECT</th>
+      </tr>
+      <tr>
+        <td>Kotlin</td>
+        <td>Website and backends.</td>
+        <td>ThingSpeak Weather Station, Website</td>
+      </tr>
+      <tr>
+        <td>JavaScript</td>
+        <td>Websites, single page web apps, native apps</td>
+        <td>Channel Grapher, AirMonitor ReactNative App, Website</td>
+      </tr>
+      <tr>
+        <td>C/C++</td>
+        <td>Embedded applications, microcontrollers</td>
+        <td>Weather Station, LoRaWan Weather Station, LED Clock</td>
+      </tr>
+      <tr>
+        <td>Golang</td>
+        <td>CLI Apps, Android App</td>
+        <td>Hashtree, Hashtree mobile</td>
+      </tr>
+      <tr>
+        <td>HTML/CSS</td>
+        <td>Web design</td>
+        <td>Channel Grapher, Various Web Sites</td>
+      </tr>
+    </table>
+  </div>
+  <div id="projectBox" class="hidden-content">
+    <div>
+        <a id="imgHref" href="https://www.thingiverse.com/thing:4126483"><img class="outrun-img" id="imgID" src="img/project1.jpg" ></a>
+    </div>
+    <button class="prev-img menu" onclick="nextImage()">&#10094;</button>
+    <button class="next-img menu" onclick="nextImage()">&#10095;</button>
+
+  </div>
+
+
+</div>
+<svg width="0" height="0">
+  <filter id="filter">
+    <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="10" id="fractalNoise"/>
+    <feDisplacementMap id="displacementMap" in="SourceGraphic" scale="120"/>
+  </filter>
+  <animate
+    xlink:href="#displacementMap"
+    id="animclouds1"
+    begin="0; animclouds2.end"
+    attributeName="scale"
+    from="50"
+    to="180"
+    dur="3s"
+    fill="freeze"
+  />
+  <animate
+    xlink:href="#displacementMap"
+    id="animclouds2"
+    begin="animclouds1.end"
+    attributeName="scale"
+    from="180"
+    to="50"
+    dur="3s"
+    fill="freeze"
+  />
+  <animate
+    xlink:href="#fractalNoise"
+    id="animclouds3"
+    begin="0;animclouds4.end"
+    attributeName="baseFrequency"
+    from="0.03"
+    to="0.01"
+    dur="30s"
+    fill="freeze"
+  />
+  <animate
+    xlink:href="#fractalNoise"
+    id="animclouds4"
+    begin="animclouds3.end"
+    attributeName="baseFrequency"
+    from="0.01"
+    to="0.03"
+    dur="30s"
+    fill="freeze"
+  />
+</svg>
+
+
+<script async src="js/outrun.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+  window.ga = function () {
+    ga.q.push(arguments)
+  };
+  ga.q = [];
+  ga.l = +new Date;
+  ga('create', 'UA-XXXXX-Y', 'auto');
+  ga('set', 'transport', 'beacon');
+  ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
