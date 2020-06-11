@@ -25,6 +25,7 @@
 <![endif]-->
 
 <!-- Add your site or application content here -->
+<!-- Credit: https://codepen.io/heymiguel -->
 <div class="background-80s animated-clouds stars" style="--background-height:100vh">
   <div class="sun"></div>
 
@@ -34,7 +35,7 @@
   <div class="text">
     <div id="masterMenu" onclick="openMenu()" class="menu outrun glow show">MENU</div>
     <div id="dropDownMenu" class="menu outrun glow">
-      <a class="menu" href="/blog/">BLOG</a><br/>
+      <a class="menu" href="https://wilyarti-howard.net/blog/">BLOG</a><br/>
       <a class="menu" onclick="showResume()" href="#">RESUME</a><br/>
       <a class="menu" onclick="showProjects()" href="#">PROJECTS</a><br/>
     </div>
@@ -45,9 +46,6 @@
       <div class="chrome shine" data-text="HOWARD" style="--shine-delay:1s;">HOWARD<span
         class="spark spark-offset"></span></div>
     </div>
-
-    <div id="dynamicTitle"  class="menu outrun glow"></div>
-
   </div>
 
   <div id="resumeBox" class="hidden-content">
@@ -87,8 +85,8 @@
     </table>
   </div>
   <div id="projectBox" class="hidden-content">
-    <div>
-        <a id="imgHref" href="https://www.thingiverse.com/thing:4126483"><img class="outrun-img" id="imgID" src="img/project1.jpg" ></a>
+    <div>   <div id="dynamicTitle"  class="menu outrun text glow dynamic-title"></div>
+      <a id="imgHref" href="#"><img class="menu outrun-img" id="imgID" src="img/project1.jpg" ></a>
     </div>
     <button class="prev-img menu" onclick="nextImage()">&#10094;</button>
     <button class="next-img menu" onclick="nextImage()">&#10095;</button>
